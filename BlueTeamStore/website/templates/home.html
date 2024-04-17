@@ -1,0 +1,182 @@
+{% extends "base.html" %} {% block title %}BlueStore Home{% endblock %} {% block content
+    %}
+    <br>
+    <br>
+    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+      <div class="container">
+          <div class="d-sm-flex align-items-center justify-content-between">
+              <div>
+                  <h1><span class="text-primary">
+                      Welcome to the BlueStore!!!
+                  </span></h1>
+                  <p class="lead my-4">
+                      Powered by the Blue Team!!
+                  </p>
+                  <a href="/mens.html" class="btn btn-primary mt-3">
+                    <i class="bi bi-chevron-right"></i> Login Now!!
+                </a>
+              </div>
+              <img src="static/images/bluegirl.jpg" style="height: 100"alt="">
+          </div>
+      </div>
+  </section>
+
+  <!--Newsletter and form-->
+  <section class="bg-primary text-light p-5">
+      <div class="container" >
+          <div class="d-md-flex justify-content-between align-items-center">
+              <h3 class="mb-3 mb-md-0" align="center">Here is where all the fun begins!</h3>                
+          </div>
+      </div>
+  </section>
+
+  <!--Boxes-->
+<section class="p-5">
+  <div class="container">
+      <div class="row text-center g-4">
+          <div class="col-md">
+              <div class="card bg-dark text-light">
+                  <div class="card-body text center">
+                      <div class="h1 mb-3">
+                          <i class="bi bi-bag-dash"></i>
+                      </div>
+                      <h3 class="card-title mb-3">
+                          Mens
+                      </h3>
+                      <p class="card-text">
+                          Here you can find all the Men's clothing!!
+                      </p>
+                      <a href="/mens.html" class="btn btn-primary mt-3">
+                          <i class="bi bi-chevron-right"></i> Mens
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md">
+              <div class="card bg-primary text-light">
+                  <div class="card-body text center">
+                      <div class="h1 mb-3">
+                          <i class="bi bi-bag-fill"></i>
+                      </div>
+                      <h3 class="card-title mb-3">
+                          Womens
+                      </h3>
+                      <p class="card-text">
+                          Here you can find all the Women's clothing!!
+                      </p>
+                      <a href="/womens.html" class="btn btn-dark mt-3">
+                          <i class="bi bi-chevron-right"></i> Womens
+                      </a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md">
+              <div class="card bg-dark text-light">
+                  <div class="card-body text center">
+                      <div class="h1 mb-3">
+                          <i class="bi bi-bag-check"></i>
+                      </div>
+                      <h3 class="card-title mb-3">
+                          Shoes
+                      </h3>
+                      <p class="card-text">
+                          All the shoes for Men and Women are here!!
+                      </p>
+                      <a href="/shoes.html" class="btn btn-primary mt-3">
+                          <i class="bi bi-chevron-right"></i> Shoes
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!--Question Accordion-->
+<section id="questions" class="p-5 bg-primary text-light">
+  <div class="container">
+      <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+      <div class="accordion accordion-flush" id="questions">
+
+          <!--Item 1-->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-one">
+                Where exactly are you located?
+              </button>
+            </h2>
+            <div id="question-one" class="accordion-collapse collapse" data-bs-parent="#questions">
+              <div class="accordion-body">We are located in Dragon, UT. We have a great campus that is relaxing for our students so they can easily study and get good grades.</div>
+            </div>
+          </div>
+          <!-- Item 2-->
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-two">
+                  Are your prices competitive?
+                </button>
+              </h2>
+              <div id="question-two" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">It is free to go here. Just need to learn how to use our website!!</div>
+              </div>
+            </div>
+          <!-- Item 3-->
+          <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-three">
+                  Can I get any other color besides Blue?
+                </button>
+              </h2>
+              <div id="question-three" class="accordion-collapse collapse" data-bs-parent="#questions">
+                <div class="accordion-body">You need to know how to browse our website and hit the correct buttons and make the right decisions. We will teach you everything else you need to know.</div>
+              </div>
+            </div>
+        </div>
+        <!-- Item 4-->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-four">
+              How do I sign up for member benefits?
+            </button>
+          </h2>
+          <div id="question-four" class="accordion-collapse collapse" data-bs-parent="#questions">
+            <div class="accordion-body">Just need to go to the website and create a new account and that gets you signed up!</div>
+          </div>
+        </div> 
+        <!-- Item 5-->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#question-five">
+              How can I leave a good review?
+            </button>
+          </h2>
+          <div id="question-five" class="accordion-collapse collapse" data-bs-parent="#questions">
+            <div class="accordion-body">A Dragon is a state of mind. It makes you ready for the world!</div>
+          </div>
+        </div>
+  </div>
+</section>
+  
+<!--Learn Section-->
+<section id="learn" class="p-5 text-dark">
+  <div class="container">
+      <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+              <img src="static/images/blueguy.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-md p-5">
+              <h2>Become a member</h2>
+              <p class="lead">
+                  Sign Up
+              </p>
+              <p>
+                  Learn all the benefits
+              </p>
+              <a href="/sign_up" class="btn btn-primary mt-3">
+                <i class="bi bi-chevron-right"></i> Sign Up Now!!
+            </a>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock %}

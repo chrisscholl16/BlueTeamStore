@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="static/images/shopicon.png">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <a class="navbar-brand" href="/">BlueStore</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/sign_up">Sign Up</a>
+          </li>
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Clothing
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/mens.html">Men's</a>
+              <a class="dropdown-item" href="/womens.html">Women's</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="shoes.html">Shoe's</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/admin.html">Admin</a>
+            <li class="nav-item active"><a href="/logout" class="nav-link">Log out</a></li>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search Clothing" aria-label="Search">
+          <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search h5"></i></button>
+        </form>
+      </div>
+    </nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {%if messages %}
+      {% for category, message in messages %}
+      {% if category == 'error' %}
+      <div class="alert alert-danger alter-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% else %}
+      <div class="alert alert-success alter-dismissable fade show" role="alert">
+        {{ message }}
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <div class="container">{% block content %} {% endblock %}</div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <footer>
+      <div style="text-align: center">Copyright &copy 2024 BlueTeamInc.&trade; All Rights Reserved.
+      <div class="social-icons">
+        <a href="https://www.facebook.com/"  title="facebook"> 
+          <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://twitter.com/?lang=en" title="twitter"> 
+          <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.instagram.com/" title="instagram">  
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.youtube.com/" title="youtube">
+          <i class="fa fa-youtube-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com" title="linkedin">
+          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.pinterest.com/" title="pinterest">
+          <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+        </a>
+       
+      </div>
+    </div>
+    </footer>    
+  </body>
+</html>
