@@ -12,19 +12,16 @@ def home():
 
 
 @views.route('/mens.html', methods=['GET', 'POST'])
-@login_required
 def mens():
     return render_template("/mens.html", user=current_user)
 
 
 @views.route('/womens.html', methods=['GET', 'POST'])
-@login_required
 def womens():
     return render_template("womens.html", user=current_user)
 
 
 @views.route('/shoes.html', methods=['GET', 'POST'])
-@login_required
 def shoes():
     return render_template("shoes.html", user=current_user)
 
