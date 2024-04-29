@@ -1,0 +1,140 @@
+{% extends "base.html" %} {% block title %}Membership Page{% endblock %} {% block content
+    %}
+<section style="background-image: url('/static/images/BlueStore.png'); background-size: cover;">
+    
+
+    <br>
+    <br>
+    <br>
+
+
+    <header>
+        <h1 class="text-center">BlueTeam Store</h1>
+        <h2 class="text-center">Membership Benefits</h2>
+    </header>
+    
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md">
+                    <div class="card bg-dark text-primary">
+                        <div class="card-body text center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-exclude"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Blue Level
+                            </h3>
+                            <p class="card-text">
+                                <dl>
+                                    <dt>**Free Clothing Item**</dt>
+                                    <dd>- free item of your choice</dd>
+                                    <dt>**Free Shipping**</dt>
+                                    <dd>- free shipping on all orders</dd>
+                                    <dt>**Email Discounts**</dt>
+                                    <dd>- free discounts cards sent in email</dd>
+                                  </dl> 
+                            </p>
+                            <a href="/sign_up" class="btn btn-primary btn-lg btn-block mt-3">
+                                <i class="bi bi-stack"></i> Get Blue Level
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-primary text-dark">
+                        <div class="card-body text center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-exclude"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Black Level
+                            </h3>
+                            <p class="card-text">
+                                <dl>
+                                    <dt>**Free Shipping**</dt>
+                                    <dd>- free shipping on all orders</dd>
+                                    <dt>**Email Discounts**</dt>
+                                    <dd>- free discounts cards sent in email</dd>
+                                  </dl>
+                            </p>
+                            <a href="/sign_up" class="btn btn-dark btn-lg btn-block mt-3">
+                                <i class="bi bi-stack"></i> Get Black Level
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-light">
+                        <div class="card-body text center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-exclude"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                White Level
+                            </h3>
+                            <p class="card-text">
+                                <dl>
+                                    <dt>**Email Discounts**</dt>
+                                    <dd>- free discounts cards sent in email</dd>
+                                  </dl>
+                            </p>
+                            <a href="/sign_up" class="btn btn-light btn-lg btn-block mt-3">
+                                <i class="bi bi-stack"></i> Get White Level
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </section>
+
+    
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md">
+                    <div class="card bg-dark text-primary">
+                        <div class="card-body text center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-journal-check"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Login
+                            </h3>
+                            <p class="card-text">
+                                Login here to continue enjoying the benifits!!
+                            </p>
+                            <a href="/login" class="btn btn-primary mt-3">
+                                <i class="bi bi-chevron-right"></i> Login
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md">
+                    <div class="card bg-dark text-primary">
+                        <div class="card-body text center">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-journal-arrow-up"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Sign Up
+                            </h3>
+                            <p class="card-text">
+                                Sign up to start enjoying the benefits!!
+                            </p>
+                            <a href="/sign_up" class="btn btn-primary mt-3">
+                                <i class="bi bi-chevron-right"></i> Sign Up
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <div style="text-align: center">Not Affiliated with Gucci &copy, Balenciaga &copy, Prada &copy, Nike &copy, Adidas &copy, Yeezy &copy, Louis Vuitton &copy, or Christian Dior &copy.
+    
+    {% endblock %}

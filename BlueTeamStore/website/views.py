@@ -25,4 +25,8 @@ def womens():
 def shoes():
     return render_template("shoes.html", user=current_user)
 
+@views.route('/members.html', methods=['GET', 'POST'])
+def members():
+    return render_template("members.html", user=current_user)
+
 
