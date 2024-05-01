@@ -1,6 +1,9 @@
 {% extends "base.html" %} {% block title %}BlueStore Home{% endblock %} {% block content
     %}
-    <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+
+    <br>
+
+   <section class="bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
       <div class="container">
           <div class="d-sm-flex align-items-center justify-content-between">
               <div>
@@ -13,9 +16,35 @@
                   <a href="/login" class="btn btn-primary btn-lg active mt-3">
                     <i class="bi bi-journal-check"></i> Login Now!!
                 </a>
-              </div>
-              <img src="static/images/bluegirl.jpg" height="550px" width="400px" alt="">
-          </div>
+               </div>
+               <div id="slideshow">
+                <div class="slide-wrapper">
+                     
+                    <!-- Define each of the slides
+                 and write the content -->
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            <img src="static/images/womensClothes/Louis3women.jpg" alt="Cinque Terre" width="400" height="500">
+                        </h1> 
+                    </div>
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            <img src="static/images/mensClothes/Dior2men.jpg" alt="Forest">
+                        </h1> 
+                    </div>
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            <img src="static/images/womensClothes/Louis3wombot.jpg" alt="Northern Lights" width="400" height="500">
+                        </h1> 
+                    </div>
+                    <div class="slide">
+                        <h1 class="slide-number">
+                            <img src="static/images/mensClothes/Gucci1menbot.png" alt="Mountains" width="400" height="500">
+                        </h1> 
+                    </div>
+                </div>
+            </div>
+            </div>  
       </div>
   </section>
 
