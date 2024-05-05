@@ -1,4 +1,4 @@
 flask
 Flask-SQLAlchemy
-flask_login
+flask-login
 flask-admin
