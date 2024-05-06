@@ -1,0 +1,168 @@
+{% extends "base.html" %} {% block title %}Womens Page{% endblock %} {% block content
+    %}
+
+    <html>
+
+    <header>
+        <h1>Women's Tops</h1>
+    </header>
+    
+    <hr>
+    
+    <body>
+    <div class="spacer"></div>
+    
+    <div class="card">
+      <img src="static/images/womensClothes/Balenciaga4women.jpeg" alt="Balenciaga Top" style="width:100%">
+      <h1> Balenciaga Top</h1>
+      <p class="price">$49.99</p>
+      <p> Balenciaga Long sleeve top with pattern</p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </span>
+      <div class="spacer"></div>
+      <p><button>Add to Cart</button></p>
+    </div>
+    
+    
+    <div class="card">
+      <img src="static/images/womensClothes/Dior2women.jpeg" alt="Dior Tshirt" style="width:100%">
+      <h1>Dior T-shirt</h1>
+      <p class="price">$85.99</p>
+      <p> White Dior T-shirt with back print</p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </span>
+      <div class="spacer"></div>
+      <p><button>Add to Cart</button></p>
+    </div>
+    
+    <div class="card">
+      <img src="static/images/womensClothes/Gucci1women.png" alt="Gucci Shirt" style="width:100%">
+      <h1>Gucci Tank-Top</h1>
+      <p class="price">$50.90</p>
+      <p> Gucci Tank top with logo</p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </span>
+      <div class="spacer"></div>
+      <p><button>Add to Cart</button></p>
+    </div>
+    
+    <div class="card">
+      <img src="static/images/womensClothes/Louis3women.jpg" alt="Louis Pink" style="width:100%">
+      <h1> Louis Vuitton Top</h1>
+      <p class="price">$230.89</p>
+      <p> Pink crop top with stripes</p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+      </span>
+      <div class="spacer"></div>
+      <p><button>Add to Cart</button></p>
+    </div>
+    
+    <div class="card">
+      <img src="static/images/womensClothes/Prada5women.jpg" alt="Prada top" style="width:100%">
+      <h1>Prada top</h1>
+      <p class="price">$124.89</p>
+      <p> Prada crop top with logo</p>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <span class="stars">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+      </span>
+      <div class="spacer"></div>
+      <p><button>Add to Cart</button></p>
+    </div>
+    
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 50px;
+      }
+    
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        width: 300px;
+        height: 400px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-family: arial;
+        display: flex;
+        flex-direction: column;
+    
+      }
+    
+      .spacer {
+        margin-bottom: 20px;
+      }
+    
+      .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+    
+      .card h1 {
+        font-size: 23px;
+      }
+    
+      .price {
+        color: grey;
+        font-size: 19px;
+      }
+    
+      .card button {
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+      }
+    
+      .card button:hover {
+        opacity: 0.7;
+      }
+    
+      .checked {
+        color: orange;
+      }
+    
+      .stars {
+        display: inline-block;
+      }
+    </style>
+
+    </body>
+    
+    </html>
+   
+
+
+    {% endblock %}

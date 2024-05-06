@@ -45,4 +45,18 @@ def itemMSK():
 def itemWSD():
     return render_template("itemWSD.html", user=current_user)
 
+@views.route('/womenstops.html', methods=['GET', 'POST'])
+def womenstops():
+    return render_template("womenstops.html", user=current_user)
 
+@views.route('/womensbottoms.html', methods=['GET', 'POST'])
+def womensbottoms():
+    return render_template("womensbottoms.html", user=current_user)
+
+@views.route('/mensbottoms.html', methods=['GET', 'POST'])
+def mensbottoms():
+    return render_template("mensbottoms.html", user=current_user)
+
+@views.route('/menstops.html', methods=['GET', 'POST'])
+def menstops():
+    return render_template("menstops.html", user=current_user)
