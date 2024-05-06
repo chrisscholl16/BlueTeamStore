@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block title %}Mens Nike Kobe{% endblock %}
+
+{% block content %}
+
+<section class="bg-light text-dark p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+    <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div>
+                <h1><span class="text-primary">
+                    Men's Nike Kobe Bruce Lee's
+                </span></h1>
+                <p class="lead my-4">
+                    Size: 
+                </p>
+                <p class="lead my-4">
+                    Quantity: 
+                </p>
+                <a href="/cart" class="btn btn-primary btn-lg active mt-3">
+                    <i class="bi bi-cart-check"></i> Add to Cart
+                </a>
+                <a href="/checkout" class="btn btn-primary btn-lg active mt-3">
+                    <i class="bi bi-cash"></i> Guest Purchase
+                </a>
+            </div>
+            <img src="/static/images/menShoes/kobeMen4atl.jpg" height="550px" width="600px" alt="">
+        </div>
+    </div>
+</section>
+
+{% endblock %}
