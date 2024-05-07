@@ -9,6 +9,7 @@
     ],
     "sqltools.useNodeRuntime": true,
     "githubPullRequests.ignoredPullRequestBranches": [
+        "main",
         "main"
     ]
 }
