@@ -60,3 +60,11 @@ def mensbottoms():
 @views.route('/menstops.html', methods=['GET', 'POST'])
 def menstops():
     return render_template("menstops.html", user=current_user)
+
+@views.route('/womensshoes.html', methods=['GET', 'POST'])
+def womensshoes():
+    return render_template("womensshoes.html", user=current_user)
+
+@views.route('/mensshoes.html', methods=['GET', 'POST'])
+def mensshoes():
+    return render_template("mensshoes.html", user=current_user)
