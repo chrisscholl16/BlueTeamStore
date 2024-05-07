@@ -11,4 +11,10 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     userName = db.Column(db.String(150))
     
+class Item(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    size = db.Column(db.String(150))
+    color = db.Column(db.String(150))
+    brand = db.Column(db.String(150))
+    
 admin.add_view(ModelView(User, db.session))
