@@ -1,0 +1,39 @@
+id,cat,price,description,gender
+1,shirt,79,"Belenciaga T-shirt",m
+2,shirt,66,"Dior Shirt",m
+3,shirt,131,"Gucci Polo",m
+4,shirt,135,"Louis Vuitton Shirt",m
+5,shirt,135,"Prada T-shirt",m
+6,shirt,50,"Balenciaga Top",f
+7,shirt,86,"Dior T-Shirt",f
+8,shirt,51,"Gucci Tank-Top",f
+9,shirt,231,"Louis Vuitton Top",f
+10,shirt,125,"Prada Top",f
+11,pants,180,"Dior Dress Pants",m
+12,pants,191,"Wide Leg Pants",m
+13,pants,191,"Grey Pants",m
+14,pants,131,"Purple Pants",m
+15,pants,135,"Balloon Pants",m
+16,pants,135,"Bell Bottoms",m
+17,pants,80,"Balenciaga Bottoms",f
+18,pants,86,"Dior Pants",f
+19,pants,131,"Gucci Joggers",f
+20,pants,231,"Prada Pants",f
+21,pants,155,"Louis Vuitton Jeans",f
+22,shoes,680,"Bulldozer Lace Up",m
+23,shoes,150,"Balenciaga Dress Shoes",m
+24,shoes,391,"Dior Dress Shoes",m
+25,shoes,1231,"Explorer Boot",m
+26,shoes,1179,"White Sneakers",m
+27,shoes,1039,"Gucci Print Boot",m
+28,shoes,566,"Lace Up Dress Shoes",m
+29,shoes,1575,"Adidas Pharrell X Nmd Human Race Yellow",m
+30,shoes,350,"Yeezy Boost 350 V2",m
+31,shoes,450,"Balenciaga Pink Sneakers",f
+32,shoes,450,"White Black Bootie",f
+33,shoes,101,"Tan Sneaker",f
+34,shoes,531,"Ballet Heel",f
+35,shoes,179,"Ankle Bootie",f
+36,shoes,179,"Gucci Print Bootie",f
+37,shoes,175,"Cheetah Print Loafers",f
+38,shoes,150,"LV White Sneakers",f
