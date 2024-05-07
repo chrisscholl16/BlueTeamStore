@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:BlueTeamStore}/BlueTeamStore/instance/database.db",
+            "name": "Cart"
+        }
+    ],
+    "sqltools.useNodeRuntime": true,
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "main"
+    ]
+}

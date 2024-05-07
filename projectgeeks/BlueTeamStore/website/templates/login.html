@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block title %}Blue Store Login{% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+
+<section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+  <div><img src="static/images/login.jpg" style="height: 1" alt="login"></div>
+  <div class="container">
+      <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+              <h1><span class="text-dark">
+                  Login to Place Your Order Please
+              </span></h1>
+              <p class="lead my-4">
+                  Or <a href="/sign_up" style="text-decoration:none">Sign Up </a>to begin your shopping experience!!
+              </p>
+          </div>
+      </div>
+  </div>
+</section>
+
+<form method="POST">
+    <br>
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="password1">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+      />
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary btn-lg">
+      <i class="bi bi-journal-check"></i> Log In</button>
+  </form>
+
+{% endblock %}
