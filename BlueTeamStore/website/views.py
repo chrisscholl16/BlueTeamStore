@@ -43,4 +43,26 @@ def show_place_order():
 
 
 
+@views.route('/womenstops.html', methods=['GET', 'POST'])
+def womenstops():
+    return render_template("womenstops.html", user=current_user)
 
+@views.route('/womensbottoms.html', methods=['GET', 'POST'])
+def womensbottoms():
+    return render_template("womensbottoms.html", user=current_user)
+
+@views.route('/mensbottoms.html', methods=['GET', 'POST'])
+def mensbottoms():
+    return render_template("mensbottoms.html", user=current_user)
+
+@views.route('/menstops.html', methods=['GET', 'POST'])
+def menstops():
+    return render_template("menstops.html", user=current_user)
+
+@views.route('/womensshoes.html', methods=['GET', 'POST'])
+def womensshoes():
+    return render_template("womensshoes.html", user=current_user)
+
+@views.route('/mensshoes.html', methods=['GET', 'POST'])
+def mensshoes():
+    return render_template("mensshoes.html", user=current_user)
