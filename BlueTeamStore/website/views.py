@@ -41,25 +41,6 @@ def show_place_order():
     return render_template("place_order.html", user=current_user)
 
 
-@views.route('/itemMGT.html',methods=['GET', 'POST'])
-def itemMGT():
-    return render_template("itemMGT.html", user=current_user)
-
-
-@views.route('/itemWBT.html',methods=['GET', 'POST'])
-def itemWBT():
-    return render_template("itemWBT.html", user=current_user)
-
-
-@views.route('/itemMSK.html',methods=['GET', 'POST'])
-def itemMSK():
-    return render_template("itemMSK.html", user=current_user)
-
-
-@views.route('/itemWSD.html',methods=['GET', 'POST'])
-def itemWSD():
-    return render_template("itemWSD.html", user=current_user)
-
 
 
 
