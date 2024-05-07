@@ -1,8 +1,4 @@
 flask
 Flask-SQLAlchemy
-<<<<<<< HEAD
 flask_login
-=======
-flask-login
->>>>>>> 468afc5dff9129002a637790e6331667d899883b
 flask-admin
