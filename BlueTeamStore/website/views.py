@@ -25,6 +25,10 @@ def mens():
 def womens():
     return render_template("womens.html", user=current_user)
 
+@views.route('/shoe.html', methods=['GET', 'POST'])
+def shoe():
+    return render_template("shoe.html", user=current_user)
+
 
 @views.route('/cart.html', methods=['GET', 'POST'])
 def cart():
