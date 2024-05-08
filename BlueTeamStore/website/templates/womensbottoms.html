@@ -9,92 +9,29 @@
     
     <hr>
     
-  <section class="p-5">
-    <div class="container">
-    
-    <div class="card">
-      <img src="static/images/womensClothes/Balenciaga4wombot.jpg" alt="Balenciaga Bottoms" style="width:100%">
-      <h1> Balenciaga Bottoms</h1>
-      <p class="price">$79.99</p>
-      <p> Balenciaga leather bottoms</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    
-    <div class="card">
-      <img src="static/images/womensClothes/Dior2wombot.jpg" alt="Tan Dior Pant" style="width:100%">
-      <h1>Dior Pants</h1>
-      <p class="price">$85.99</p>
-      <p> Tan Dior flare bottoms</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/womensClothes/Gucci1wombat.jpg" alt="Gucci Joggers" style="width:100%">
-      <h1>Gucci Joggers</h1>
-      <p class="price">$130.90</p>
-      <p> Gucci joggers with print</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/womensClothes/Prada5wombot.jpg" alt="Prada Dress Pants" style="width:100%">
-      <h1> Prada pants</h1>
-      <p class="price">$230.89</p>
-      <p> Black Prada skinny-legged pants</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/womensClothes/Louis3wombot.jpg" alt="Louis Jeans" style="width:100%">
-      <h1>Louis Vuitton jeans</h1>
-      <p class="price">$154.89</p>
-      <p> Dark wash jeans with print</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
+    <section class="p-5">
+      <div class="container">
+        {% for product in products %}
+        <div class ="card">
+          <img src="{{url_for('static', filename='images/womensClothes/' + product.image) }}" alt ="{{ product.cat }}" style="width:100%">
+          <p class="price">${{ product.price }}</p>
+          <p>{{ product.description }}</p>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <span class="stars">
+            {% for _ in range(5) %}
+              {% if loop.index < product.rating %}
+                <span class="fa fa-star checked"></span>
+              {% else %}
+                <span class="fa fa-star"></span>
+              {% endif %}
+            {% endfor %}
+          </span>
+          <div class="spacer"></div>
+          <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
     
     <style>
       .container {

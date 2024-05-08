@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, Flask, jsonify, redirect
 from flask_login import login_required, current_user
 from . import db
+from .models import Product
 
 
 views = Blueprint('views', __name__)
@@ -46,27 +47,32 @@ def show_place_order():
 
 
 
-
 @views.route('/womenstops.html', methods=['GET', 'POST'])
 def womenstops():
-    return render_template("womenstops.html", user=current_user)
+    products = Product.query.filter_by(gender='f', cat='top').all()
+    return render_template("womenstops.html", user=current_user, products=products)
 
 @views.route('/womensbottoms.html', methods=['GET', 'POST'])
 def womensbottoms():
-    return render_template("womensbottoms.html", user=current_user)
+    products = Product.query.filter_by(gender='f', cat='bottom').all()
+    return render_template("womensbottoms.html", user=current_user, products=products)
 
 @views.route('/mensbottoms.html', methods=['GET', 'POST'])
 def mensbottoms():
-    return render_template("mensbottoms.html", user=current_user)
+    products = Product.query.filter_by(gender='m', cat='bottom').all()
+    return render_template("mensbottoms.html", user=current_user, products=products)
 
 @views.route('/menstops.html', methods=['GET', 'POST'])
 def menstops():
-    return render_template("menstops.html", user=current_user)
+    products = Product.query.filter_by(gender='m', cat='top').all()
+    return render_template("menstops.html", user=current_user, products=products)
 
 @views.route('/womensshoes.html', methods=['GET', 'POST'])
 def womensshoes():
-    return render_template("womensshoes.html", user=current_user)
+    products = Product.query.filter_by(gender="f", cat='shoes' )
+    return render_template("womensshoes.html", user=current_user, products=products)
 
 @views.route('/mensshoes.html', methods=['GET', 'POST'])
 def mensshoes():
-    return render_template("mensshoes.html", user=current_user)
+    products = Product.query.filter_by(gender='m', cat='shoes').all()
+    return render_template("mensshoes.html", user=current_user, products=products)

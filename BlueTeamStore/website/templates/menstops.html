@@ -12,107 +12,27 @@
     
   <section class="p-5">
     <div class="container">
-    
-    <div class="card">
-      <img src="static/images/mensClothes/Balenciaga4men.jpg" alt="Balenciaga Tshirt" style="width:100%">
-      <h1> Balenciaga T-shirt</h1>
-      <p class="price">$79.99</p>
-      <p> White T-shirt with Balenciaga logo</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
+      {% for product in products %}
+      <div class ="card">
+        <img src="{{url_for('static', filename='images/mensClothes/' + product.image) }}" alt ="{{ product.cat }}" style="width:100%">
+        <p class="price">${{ product.price }}</p>
+        <p>{{ product.description }}</p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <span class="stars">
+          {% for _ in range(5) %}
+            {% if loop.index < product.rating %}
+              <span class="fa fa-star checked"></span>
+            {% else %}
+              <span class="fa fa-star"></span>
+            {% endif %}
+          {% endfor %}
+        </span>
+        <div class="spacer"></div>
+        <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
+      </div>
+      {% endfor %}
     </div>
-    
-    
-    <div class="card">
-      <img src="static/images/mensClothes/Dior2men.jpg" alt="Blue Dior Shirt" style="width:100%">
-      <h1>Dior shirt</h1>
-      <p class="price">$65.99</p>
-      <p> Blue Dior T-shirt with logo</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/mensClothes/Gucci1menbot.png" alt="Grey Skinny Leg" style="width:100%">
-      <h1>Grey Pants</h1>
-      <p class="price">$190.90</p>
-      <p> Gucci skinny leg pants with pattern</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/mensClothes/Gucci1men.jpeg" alt="Gucci Polo" style="width:100%">
-      <h1>Gucci Polo</h1>
-      <p class="price">$130.89</p>
-      <p> Blue Gucci polo shirt with pattern</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/mensClothes/Louis3men.jpg" alt="louis vuitton shirt" style="width:100%">
-      <h1>louis Vuitton Shirt</h1>
-      <p class="price">$134.89</p>
-      <p> Black LV shirt with print</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
-    
-    <div class="card">
-      <img src="static/images/mensClothes/Prada5men.jpeg" alt="Prada shirt" style="width:100%">
-      <h1>Prada T-shirts</h1>
-      <p class="price">$134.89</p>
-      <p> Black Prada shirt with print</p>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <span class="stars">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-      </span>
-      <div class="spacer"></div>
-      <a href="/cart" class="btn2"><p><button>Add to Cart</button></p></a>
-    </div>
+  </section>
     
     <style>
       .container {
