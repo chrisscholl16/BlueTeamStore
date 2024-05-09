@@ -18,6 +18,7 @@ def members():
 
 
 @views.route('/mens.html', methods=['GET', 'POST'])
+@login_required
 def mens():
     return render_template("/mens.html", user=current_user)
 
