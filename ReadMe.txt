@@ -16,6 +16,8 @@ Step 2: Open BlueTeamStore folder in Visual Studio Code
 Step 3: Change directory to BlueTeamStore/BlueTeamStore: 'cd BlueTeamStore'
 Step 4: Create a virtual environment in Python: 'python -m venv enter_venv_name_here'
 Step 5: Activate virtual environment: 'enter_venv_name_here\Scripts\activate'
-Step 6: Run main.py
-Step 7: Enjoy walking through the Blue Store!
+Setp 6: Install pip: 'pip install --upgrade pip'
+Step 7: Install requirements for program: 'pip install -r requirements.txt'
+Step 8: Run main.py
+Step 9: Enjoy walking through the Blue Store!
 
