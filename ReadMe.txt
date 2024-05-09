@@ -4,7 +4,7 @@ Thank you for downloading the Blue Team Store!
 Blue Team Store
 ##########################################################################################################################################
 
-Created by: Alysha Marin, Christopher Scholl, Trang Huffman, Dylan Moreland, 
+Created by: Alysha Marin, Christopher Scholl, Trang Huffman, Dylan Moreland, Alexander Cline
 
 This program is a Python program, made with flask web framework and using HTML 
 
