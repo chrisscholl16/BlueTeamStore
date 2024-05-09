@@ -4,7 +4,7 @@ from flask_admin import Admin
 from os import path
 from flask_login import LoginManager
 
-
+# Defining the Database
 db = SQLAlchemy()
 DB_NAME = "database.db"
 admin = Admin()
@@ -15,7 +15,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
     admin.init_app(app)
-
+    # defining the views for the pages
     from .views import views
     from .auth import auth
     
@@ -26,7 +26,7 @@ def create_app():
     
     with app.app_context():
         db.create_all()
-
+    # Login Management
     login_manager = LoginManager()
     login_manager.login_view = 'auth.login'
     login_manager.init_app(app)
@@ -37,7 +37,7 @@ def create_app():
 
     return app
 
-
+# Creating the Database
 def create_database(app):
     if not path.exists('website/' + DB_NAME):
         db.create_all(app=app)

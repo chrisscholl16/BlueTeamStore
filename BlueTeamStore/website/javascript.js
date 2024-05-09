@@ -1,3 +1,4 @@
+/* Javascript for the messages */
 $(document).ready(function()
 {
     $(".collapse.show").each(function()
@@ -11,6 +12,7 @@ $(document).ready(function()
     });
 });
 
+/* javascript for the SlideShow */
 var slideIndex = 1;
 showDivs(slideIndex);
 

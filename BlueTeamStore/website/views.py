@@ -3,7 +3,7 @@ from flask_login import login_required, current_user
 from . import db
 from .models import Product
 
-
+# Using the Blueprint template for showing the page templates
 views = Blueprint('views', __name__)
 
 
